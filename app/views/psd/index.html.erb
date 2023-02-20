@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Display psd file</h1>
+  <%= link_to "Get keywords", root_path(display_keywords: true) %>
+</div>
+<% unless @keywords.nil? %>
+  <div class="container">
+    <ul>
+      <% @keywords.each do |keyword| %>
+        <li><%= keyword %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
